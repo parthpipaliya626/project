@@ -3,19 +3,21 @@
 "use strict";
 
 
-function showMessage(from, text) {
-
-from = '*' + from + '*'; // make "from" look nicer
-
-alert( from + ': ' + text );
+function checkAge(age) {
+  if (age >= 18) {
+    return true;
+  } else {
+    return confirm('Do you have permission from your parents?');
+  }
 }
 
-let from = "Ann";
+let age = prompt('How old are you?', 18);
 
-showMessage(from, "Hello"); // *Ann*: Hello
-
-// the value of "from" is the same, the function modified a local copy
-alert( from ); // Ann
+if ( checkAge(age) ) {
+  alert( 'Access granted' );
+} else {
+  alert( 'Access denied' );
+}
 
 </script>
 
