@@ -3,20 +3,15 @@
 "use strict";
 
 
-function checkAge(age) {
-  if (age >= 18) {
-    return true;
-  } else {
-    return confirm('Do you have permission from your parents?');
+function showPrimes(n) {
+  nextPrime: for (let i = 2; i < n; i++) {
+
+    for (let j = 2; j < i; j++) {
+      if (i % j == 0) continue nextPrime;
+    }
+
+    alert( i ); // a prime
   }
-}
-
-let age = prompt('How old are you?', 18);
-
-if ( checkAge(age) ) {
-  alert( 'Access granted' );
-} else {
-  alert( 'Access denied' );
 }
 
 </script>
