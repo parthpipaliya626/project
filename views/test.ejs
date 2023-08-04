@@ -3,19 +3,19 @@
 "use strict";
 
 
-let userName = 'John';
+function showMessage(from, text) {
 
-function showMessage() {
-  let userName = "Bob"; // declare a local variable
+from = '*' + from + '*'; // make "from" look nicer
 
-  let message = 'Hello, ' + userName; // Bob
-  alert(message);
+alert( from + ': ' + text );
 }
 
-// the function will create and use its own userName
-showMessage();
+let from = "Ann";
 
-alert( userName ); // John, unchanged, the function did not access the outer variable
+showMessage(from, "Hello"); // *Ann*: Hello
+
+// the value of "from" is the same, the function modified a local copy
+alert( from ); // Ann
 
 </script>
 
