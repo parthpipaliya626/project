@@ -2,20 +2,21 @@
 <script>
 "use strict";
 
+
 let userName = 'John';
 
 function showMessage() {
-  userName = "Bob"; // (1) changed the outer variable
+  let userName = "Bob"; // declare a local variable
 
-  let message = 'Hello, ' + userName;
+  let message = 'Hello, ' + userName; // Bob
   alert(message);
 }
 
- alert( userName ); // John before the function call
+// the function will create and use its own userName
+showMessage();
 
- showMessage();
+alert( userName ); // John, unchanged, the function did not access the outer variable
 
- alert( userName ); // Bob, the value was modified by the function
 </script>
 
 
