@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Blogs</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="icon" type="image/x-icon" href="Symbol.jpeg">
+    <link rel="stylesheet" href="stylesforblog.css">
+    <link href="/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="/css/style.css" rel='stylesheet' type='text/css' />
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script src="/js/modernizr.custom.js"></script>
+</head>
+
+
+<body>
+    <script src="/script.js"></script>
+    <script type="text/javascript" src="js/paper-full.js">
+    </script>
+
+    <div class="wrapper">
+        <h1 class="heading"><span>SCALE</span>TECH</h1>
+        <button href="/signin" type="button" class="btn btn-primary">SignIn</button>
+    <div class="container">
+        <div class="position">
+        <div id="buttonContainer">
+            <button id="blogsButton" class="customButton" onclick="displayAddBlogsDetails()">+Add Blogs</button>
+        </div>
+    </div>
+       <div class="verticalLine"></div>
+        <div class="details">
+            <form action="/dashboard" method="post" onsubmit="return validateForm()" id="form">
+                <h1 class="color">Wanna Post A Blog!!!</h1>
+                <label for="Title">Title</label>
+                <input type="text" id="Title" name="Title" placeholder="Add Title" required>
+                <label for="Description">Description</label>
+                <input type="text" id="Description" name="Description" placeholder="Add Description" required>
+                <label for="Tag">Tags</label>
+                <input type="text" id="Tags" name="Tags" placeholder="Add Tags" required>
+                <label for="Content">Content</label>
+                <input type="text" id="Content" name="Content" placeholder="Add Content" required>
+                <input type="button" onclick="createBlog()" value="Post">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+
+
+<script>
+    function displayAddBlogsDetails(){
+    document.getElementById("form").style.display="block";
+    };
+    </script>
+
+
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.heading {
+    background-color:rgba(217, 217, 217, 1);
+    margin-right: -10px;
+    padding:40px;
+    
+}
+.btn {
+    background-color: btn btn-primary;
+}
+.color{
+   color:rgba(37, 173, 208, 0.94);
+}
+#Content{
+   padding-bottom: 80px;
+}
+.wrapper {
+  background-color: #fff;
+  width: 930px;
+  padding-right: 10px;
+  margin: 25px auto 0;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+}
+span{
+    color: rgba(37,173,208,1);
+}
+.container{
+  display: flex;
+  justify-content:start;
+  align-items: center;
+  height: 70vh;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    display: inline;
+    margin-bottom: 5px;
+}
+input {
+    width: 160%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input[type="button"] {
+    background-color: #286DEC;
+    color: #fff;
+    cursor: pointer;
+    width: 120px;
+    padding: 15px;
+}
+.verticalLine{
+    width: 1px;
+    height:558px;
+    background-color:rgba(217, 217, 217, 1);
+    margin-right: 100px;
+    margin-bottom: 40px;
+}
+.details{
+    margin-right: 240px;
+}
+.customButton {
+    position: relative;
+    padding: 10px;
+    font-size: larger;
+    font-weight: 500;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 50px;
+}
+.position{
+    margin-bottom: 120px;
+}
+#buttonContainer{
+    margin-right: 30px;
+    margin-left: 30px;
+}
+#form{
+display: none;
+}
+    </style>
