@@ -7,7 +7,11 @@ var session = require('express-session');
 var async = require('async');
 var http = require('http');
 var bodyParser = require("body-parser");
+const dotenv = require("dotenv")
+dotenv.config();
 
+
+const studentsRoutes = require('./src/student');
 const signinRouter = require('./routes/signin');
 
 
@@ -33,6 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', signinRouter);
+// app.use('/', studentsRoutes);
 
 
 

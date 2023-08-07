@@ -2,14 +2,14 @@
 <script>
 "use strict";
 
+let user = {};
 
-let sum = (a, b) => {  // the curly brace opens a multiline function
-  let result = a + b;
-  return result; // if we use curly braces, then we need an explicit "return"
-};
+// set
+user["likes birds"] = true;
 
-alert( sum(1, 2) ); // 3
+// get
+alert(user["likes birds"]); // true
 
-
-
+// delete
+delete user["likes birds"];
 </script>
