@@ -7,10 +7,12 @@
 
 
 
-let user = { name: "John", age: 30 };
+let obj = {
+  test: undefined
+};
 
-alert( "age" in user ); // true, user.age exists
-alert( "blabla" in user ); // false, user.blabla doesn't exist
+alert( obj.test ); // it's undefined, so - no such property?
 
+alert( "test" in obj ); // true, the property does exist!
 
 </script>
