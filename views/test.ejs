@@ -7,16 +7,10 @@
 
 
 
-// these properties are all right
-let obj = {
-  for: 1,
-  let: 2,
-  return: 3
-};
+let user = { name: "John", age: 30 };
 
-alert( obj.for + obj.let + obj.return );  // 6
-
-
+alert( "age" in user ); // true, user.age exists
+alert( "blabla" in user ); // false, user.blabla doesn't exist
 
 
 </script>
