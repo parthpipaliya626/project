@@ -1,18 +1,6 @@
-const { pool } = require("pg");
-const dotenv = require("dotenv");
-dotenv.config()
- 
 const connectDb = async () => {
     try {
-        const pool = new pool({
-            user: process.env.PGUSER,
-            host: process.env.PGHOST,
-            database: process.env.PGDATABASE,
-            password: process.env.PGPASSWORD,
-            port: process.env.PGPORT
-        })
- 
-        await pool.connect()
+        const pool = new Pool();
         const res = await pool.query('SELECT * FROM clients')
         console.log(res)
         await pool.end()
@@ -20,5 +8,9 @@ const connectDb = async () => {
         console.log(error)
     }
 }
- 
-connectDb();
+
+
+
+
+
+

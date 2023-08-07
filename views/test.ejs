@@ -7,17 +7,14 @@
 
 
 
-function makeUser(name, age) {
-  return {
-    name: name,
-    age: age,
-    // ...other properties
-  };
-}
+// these properties are all right
+let obj = {
+  for: 1,
+  let: 2,
+  return: 3
+};
 
-let user = makeUser("John", 30);
-alert(user.name); // John
-
+alert( obj.for + obj.let + obj.return );  // 6
 
 
 
