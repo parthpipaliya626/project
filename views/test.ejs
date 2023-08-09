@@ -12,13 +12,13 @@ let user = {
   }
 };
 
-let clone = Object.assign({}, user);
+let clone = structuredClone(user);
 
-alert( user.sizes === clone.sizes ); // true, same object
+alert( user.sizes === clone.sizes ); // false, different objects
 
-// user and clone share sizes
+// user and clone are totally unrelated now
 user.sizes.width = 60;    // change a property from one place
-alert(clone.sizes.width); // 60, get the result from the other one
+alert(clone.sizes.width); // 50, not related
  
 
 
