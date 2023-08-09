@@ -29,7 +29,6 @@ router.get('/signin', function(req, res, next) {
 
 
 
-
   /* GET users signup listing. */
 
 router.get('/signup', function(req, res, next) {
