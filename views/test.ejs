@@ -4,18 +4,12 @@
 
 
 
-let user = {
-  name: "John",
-  age: 30
-};
+let a = {};
+let b = a;
 
-let key = prompt("What do you want to know about the user?", "name");
-
-// access by variable
-
- alert( user[key] ); // John (if enter "name")
-
- alert(user.name);   // John (if enter "name")
+alert( a == b );  //true
+alert( a === b );  //true
+ 
 
 
 
